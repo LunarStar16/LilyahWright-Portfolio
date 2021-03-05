@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    min-height: 100vh;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background:black;
+    color: white;
+    position: absolute;
+}
+
+header{
+    background-color: rgb(54,52,53,0.5);
+    border-bottom: 2px solid darkgrey;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+}
+
+main{
+    z-index: 3;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.self{
+
+    background: white;
+    padding: 150px 120px;
+    margin: 50px 50px 50px 150px;
+    color: black;
+}
+.bio{
+    padding-top: 50px;
+    padding-right: 150px;
+}
+
+main2{
+    z-index: 3;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.break{
+    background-color: rgb(54,52,53,0.5);
+    border-bottom: 2px solid darkgrey;
+    border-top: 2px solid darkgrey;
+    padding: 30px;
+    margin-top: 30px;
+    display: grid;
+    grid-column: 1/ span 3;
+    justify-content: center;
+    z-index: 3;
+}
+.statement{
+    margin-top: 20px;
+    display: grid;
+    grid-column: 1/ span 3;
+    justify-content: center;
+    z-index: 3;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding:10px;
+    background: rgb(54,52,53,0.1);
+    border: 2px solid rgb(60,60,60,0.1);
+}
+
+.content{
+   background: white;
+    padding: 150px 120px;
+/*    margin: 50px 50px 50px 50px;*/
+    color: black;
+}
+.info{
+    text-align: center;
+    margin: 50px 50px 50px 50px;
+}
+
+footer {
+    z-index: 3;
+    padding: 10px;
+    background-color: rgb(54,52,53,0.5);
+    border-top: 2px solid darkgrey;
+    justify-content: center;
+}
+.stuff{
+    text-align: center;
+}
+.contact{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    padding-left: 400px;
+    padding-right: 400px;
+    
+}
+
+.c{
+    text-align: right;
+    margin: -50px 5px 0px 0px;
+    z-index: 1;
+}
+
+/*code from: https://codepen.io/NazarTheVis/pen/zqXMqP */
+
+
+@import "susy";
+@import "compass/reset";
+
+.stars, .twinkling, .clouds {
+	position:absolute;
+	display:block;
+	top:0; bottom:0;
+	left:0; right:0;
+	width:100%; height:100%;
+}
+
+.stars {
+	z-index: 0;
+    background:url('https://image.ibb.co/mjnygo/stars.png') repeat bottom center;
+}
+
+.twinkling{
+	z-index: 1;
+	background:transparent url('https://image.ibb.co/ir1DE8/twinkling.png') repeat bottom center;
+	animation: move-twink-back 200s linear infinite;
+}
+
+.clouds{
+	z-index: 2;
+    background:transparent url('https://image.ibb.co/bT4N7T/clouds.png') repeat bottom center;
+	animation: move-clouds-back 200s linear infinite;
+}
+
+@keyframes move-twink-back {
+	from {background-position:0 0;}
+	to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+	from {background-position:0 0;}
+	to {background-position:10000px 0;}
+}
