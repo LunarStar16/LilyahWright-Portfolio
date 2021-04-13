@@ -139,6 +139,9 @@ main2{
 .text2{
     grid-column: 1/ span 1;
     padding: 50px 50px 50px 50px;
+/*    text-align: right;*/
+}
+.title{
     text-align: right;
 }
 
